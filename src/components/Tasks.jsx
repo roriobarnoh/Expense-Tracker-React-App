@@ -1,6 +1,6 @@
 import React from "react";
 
-const Tasks = ({filteredExpenses,setSearchTerm}) => {
+const Tasks = ({filteredExpenses,setSearchTerm, handleDeleteExpense}) => {
   return (
     <div>
         <div className="mb-3">
@@ -21,6 +21,7 @@ const Tasks = ({filteredExpenses,setSearchTerm}) => {
               <th>Category</th>
               <th>Amount</th>
               <th>Date</th>
+              <th>Actions</th>
             </tr>
           </thead>
           <tbody>
@@ -31,6 +32,14 @@ const Tasks = ({filteredExpenses,setSearchTerm}) => {
                 <td>{expense.category}</td>
                 <td>${expense.amount}</td>
                 <td>{expense.date}</td>
+                <td>
+                  <button
+                    className="btn btn-dark w-100"
+                    onClick={() => handleDeleteExpense(expense.id)}
+                  >
+                    Delete
+                  </button>
+                </td>
               </tr>
             ))}
             {filteredExpenses.length === 0 && (
