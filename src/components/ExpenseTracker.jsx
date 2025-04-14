@@ -37,7 +37,7 @@ export default function ExpenseTracker() {
     <div className="container-fluid">
       <div className="row flex-nowrap">
         {/* Sidebar */}
-        <div className="col-12 col-md-3 col-lg-2 px-3 py-4 bg-light min-vh-100">
+        <div className="col-12 col-md-3 col-lg-2 px-3 py-4 bg-dark min-vh-100">
           <h4 className="text-center">Menu</h4>
           {/* Sidebar content (e.g., navigation, summary, filters) */}
         </div>
